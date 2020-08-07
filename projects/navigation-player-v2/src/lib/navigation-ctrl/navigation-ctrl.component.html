@@ -1,0 +1,12 @@
+<div *ngIf="navConfig.isNavCtrl" class="navigation">
+    <div *ngIf="navConfig.isLeftEnable" class="leftBtn">
+        <div *ngIf="navConfig.leftIcon ==='' && navConfig.leftIconUrl !=''" [ngClass]= "{'nav-alignment10':navConfig.alignment =='top','nav-alignment50':navConfig.alignment =='middle','nav-alignment85':navConfig.alignment =='bottom'}" class="navigation-left-img">
+            <img class="img-size" [src]="navConfig.leftIconUrl" (click)="prevPage()">
+        </div>
+    </div>
+    <div *ngIf="navConfig.isRightEnable" class="rightBtn">
+        <div *ngIf="navConfig.rightIcon ==='' && navConfig.rightIconUrl !=''" [ngClass]= "{'nav-alignment10':navConfig.alignment =='top','nav-alignment50':navConfig.alignment =='middle','nav-alignment85':navConfig.alignment =='bottom'}" class="navigation-right-img">
+            <img class="img-size" [src]="navConfig.rightIconUrl" (click)="nextPage()">
+        </div>
+    </div>
+</div>
